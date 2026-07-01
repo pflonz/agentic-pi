@@ -1,0 +1,4 @@
+# pi package ignores — generated artifacts only
+node_modules/
+*.log
+.DS_Store
