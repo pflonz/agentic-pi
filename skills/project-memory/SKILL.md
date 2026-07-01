@@ -9,6 +9,18 @@ description: Use when recording bugs, architectural decisions, project configura
 
 Maintain institutional knowledge by recording bugs, architectural decisions, configuration facts, and work history in `docs/project-notes/`. Prevents repeated troubleshooting, preserves "why" context, and provides searchable records across sessions.
 
+## Skill Activation Notice (Required)
+
+Before updating project memory, announce:
+
+```markdown
+Skill Activated
+- Skill: project-memory
+- Why: durable project knowledge should be checked or recorded now
+- What: read or update the appropriate memory file with concise, dated entries
+- How: follow the memory workflow; confirm with user before writing updates unless strict feature/bugfix workflow policy mandates automatic write
+```
+
 **Four files, one discipline:**
 - **bugs.md** — Resolved defects with root cause and prevention
 - **decisions.md** — Architectural trade-offs (ADR style)
