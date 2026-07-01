@@ -5,7 +5,7 @@ Portable pi package — extensions, skills, prompts, and themes for [pi](https:/
 ## Install
 
 ```bash
-pi install git:github.com/your-user/agentic-pi
+pi install git:github.com/pflonz/agentic-pi
 ```
 
 Pi clones this repo to `~/.pi/agent/git/github.com/your-user/agentic-pi/` and auto-loads everything in `extensions/`, `skills/`, `prompts/`, and `themes/`.
