@@ -15,6 +15,25 @@ IF A SKILL APPLIES TO YOUR TASK, YOU DO NOT HAVE A CHOICE. YOU MUST USE IT.
 This is NOT negotiable. This is NOT optional. You CANNOT rationalize your way out of this.
 </EXTREMELY-IMPORTANT>
 
+## First skill run
+
+If `AGENTS.md` is missing the marker `## AI Augments Skills` (or `CLAUDE.md` is missing the same marker for multi-tool setups), the project has not yet opted in to the skill-driven workflow. Run the initializer from the skill's own scripts directory:
+
+```bash
+./scripts/init_ai_augments.sh            # if cwd is the skill directory
+./scripts/init_ai_augments.sh /path/to/repo
+```
+
+Then read the printed summary and report to the user:
+
+- Which agent config files were patched (`AGENTS.md`, optionally `CLAUDE.md`)
+- That the marker `## AI Augments Skills` is now present (or already was)
+- Any action items left for the user (e.g. create `AGENTS.md` themselves — the script does not create it)
+
+If both markers are already present, the script exits with a "no changes needed" summary — do not re-run initialization in that case; proceed directly to the user's actual request. The markers persist across sessions, so future agents reading `AGENTS.md` will know this project follows the skill-driven workflow and must activate this skill on every request.
+
+If `AGENTS.md` does not exist at all, the script logs that and exits without changes. Recommend to the user that they create one (the script will not create `AGENTS.md` on the user's behalf — adding such a file is a project-policy decision).
+
 ## Instruction Priority
 
 AI Augments skills override default system prompt behavior, but **user instructions always take precedence**:
